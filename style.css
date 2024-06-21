@@ -1,12 +1,12 @@
 /* bahan persiapan */
 
 @font-face {
-    font-family: sans-serif;
+    font-family: boxes;
     src: url(/font/Cross\ Boxed.ttf);
 }
 
 @font-face {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: dino;
     src: url(/font/Dinofiles.ttf);
 }
 
@@ -24,6 +24,10 @@
     outline: none;
     border: none;
     text-decoration: none;
+}
+
+html {
+    overflow: hidden;
 }
 
 body {
@@ -74,9 +78,10 @@ nav .container .logo a img {
 }
 
 nav .container .logo a h1 {
-    font-family: serif;
-    font-weight: bold;
+    font-family: dino;
     font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow: 5px 4px 3px var(--background);
 }
 
 
@@ -96,7 +101,44 @@ nav .container .search-form #slogo {
     height: 40px;
 }
 
+/* menu */
+.menu  ul {
+    display: flex;
+    list-style-type: none;
+}
 
+.menu ul li {
+    transition: 0.2s linear;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: dino;
+    margin: 0px 5px;
+    color: var(--inti2);
+    margin: 0px 15px;
+    text-shadow: 5px 4px 3px var(--background);
+
+}
+
+.menu ul li:hover {
+    transform: scale(105%);
+}
+
+.menu ul li a:hover {
+    color : yellow;
+}
+
+
+/* bar extra */
+.bar_extra  {
+    display: none;
+}
+
+#user_logo {
+    display: block;
+}
 
 /* navbar akhir */
 
