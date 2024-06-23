@@ -84,21 +84,34 @@ nav .container .logo a h1 {
     text-shadow: 5px 4px 3px var(--background);
 }
 
+nav .container .logo a h1 span {
+    color: var(--inti);
+}
+
 
 /* search form */
 
 nav .container .search-form {
     display: flex;
     align-items: center;
-    background-color: var(--inti2);
+    border: var(--inti);
+    background-color: transparent;
     width: 300px;
+    border: 2px solid var(--inti);
     justify-content: space-around;
-    border-radius: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 3px var(--background);
 }
 
 nav .container .search-form #slogo {
     font-size: 15px;
     height: 40px;
+    background-color: transparent;
+    color: var(--inti);
+}
+
+.container .search-form label {
+    color: var(--inti);
 }
 
 /* menu */
@@ -119,11 +132,10 @@ nav .container .search-form #slogo {
     color: var(--inti2);
     margin: 0px 15px;
     text-shadow: 5px 4px 3px var(--background);
-
 }
 
 .menu ul li:hover {
-    transform: scale(105%);
+    transform: scale(110%);
 }
 
 .menu ul li a:hover {
@@ -146,7 +158,7 @@ nav .container .search-form #slogo {
 .layarutama {
    min-height: 100vh;
    display: flex;
-   background-image: url(background_komputer.jpg);
+   background-image: url(/foto_dan_logo/background.PNG);
    background-size: cover;
    background-repeat: no-repeat;
    object-fit: cover;
