@@ -34,6 +34,7 @@ body {
     font-family: 'Segoe UI', Tahoma,;
     height: 2000px;
 scrollbar-width: none;
+padding-top: 120px;
 }
 
 /* bahan persiapan akhir*/
@@ -71,7 +72,7 @@ nav .container .logo a {
 
 nav .container .logo a img {
     width: 70px;
-    margin: 0px 10px;
+    margin-right:10px;
 }
 
 nav .container .logo a h1 {
@@ -173,9 +174,20 @@ nav .container .search-form #slogo {
    background-size: cover;
    background-repeat: no-repeat;
    object-fit: cover;
-   margin-top: 120px;
    justify-content: center;
-   width: 100%;
+   width: 100vw;
+   position: relative;
+}
+
+.layarutama::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, 
+    rgba(255, 255, 255, 0) 25% );
 }
 
 
@@ -183,28 +195,49 @@ nav .container .search-form #slogo {
 header {
     width: 80%;
     justify-content: center;
+
 }
 
 .slider {
     margin-top: 50px;
+    height: 700px;
+    border-radius: 2%;
+    width: 1300px;
+    margin: 50px auto;
 }
 
 .slides {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
     margin: auto;
-    background-color: red;
+    border-radius: 2%;
     display: flex;
+    height: 100%;
 }
 
 .slide {
     display: block;
+    bottom: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2%;
+    align-items: flex-end;
+}
+
+.slide a {
+    margin-top: 90px;
 }
 
 .slide a img {
     vertical-align: middle;
-    width: 100%;
-    height: 400px;
+    width: 200px;
+    bottom: 0;
+    object-fit: center;
+    border-radius: 10px;
+    margin-top: 400px;
+    padding: 40px;
 }
 
 .next {
@@ -222,7 +255,7 @@ header {
     background-color: var(--background);
 }
 .prev {
-        cursor: pointer;
+    cursor: pointer;
     position: absolute;
     top: 40%;
     width: auto;
@@ -282,6 +315,28 @@ header {
             opacity: 1;
     }
 }
+
+/* about us */
+section {
+    padding-top: 140px;
+    color: var(--inti2);
+    justify-content: center;
+}
+
+.aboutus h1 {
+    font-size: 40px;
+    font-family: dino;
+    letter-spacing: 3px;
+    border-bottom: 2px solid var(--inti2);
+    color: var(--inti3);
+}
+
+.aboutus .caption {
+    display: flex;
+    align-items: center;
+}
+
+
 
 
 
