@@ -32,7 +32,7 @@ body {
     color: white Geneva, Verdana, sans-serif;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma,;
-    height: 2000px;
+    height: 5000px;
 scrollbar-width: none;
 padding-top: 120px;
 }
@@ -317,25 +317,63 @@ header {
 }
 
 /* about us */
-section {
-    padding-top: 140px;
+.aboutus {
+    padding-top: 160px;
     color: var(--inti2);
+    font-family: dino;
+    letter-spacing: 3px;
+    text-align: center;
     justify-content: center;
+    width: 100%;
 }
 
 .aboutus h1 {
     font-size: 40px;
     font-family: dino;
-    letter-spacing: 3px;
-    border-bottom: 2px solid var(--inti2);
     color: var(--inti3);
 }
 
-.aboutus .caption {
-    display: flex;
-    align-items: center;
+.aboutus h1 span {
+    color: var(--inti2);
 }
 
+.caption {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding-left: 400px;
+}
+
+.caption img {
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+.caption .deskripsi {
+   text-align: left;
+}
+
+.deskripsi h3 {
+    font-family: dino;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.caption .deskripsi p {
+ width: 60%;
+}
+
+/* card item  */
+.fav-item {
+    padding-top: 160px;
+    color: var(--inti2);
+    font-family: dino;
+    letter-spacing: 3px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
 
 
 
@@ -380,16 +418,19 @@ section {
     }
 }
 
+/* layar tablet */
 @media (max-width:880px){
     html {
         font-size: 68.2%;
+    }
+
+    body {
+        padding-top: 100px;
     }
     
     nav {
         justify-content: space-between;
     }
-
-
 
     nav .logo {
         width: 400px;
@@ -444,9 +485,6 @@ section {
         transform: scale(120%);
     }
     
-    .layarutama {
-        margin-top: 100px;
-    }
 
 }
 
