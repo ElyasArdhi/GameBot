@@ -24,6 +24,7 @@
     outline: none;
     border: none;
     text-decoration: none;
+    scrollbar-width: none;
 }
 
 
@@ -32,7 +33,6 @@ body {
     color: var(--inti2);
     justify-content: center;
     font-family: 'Segoe UI', Tahoma,;
-    height: 5000px;
 scrollbar-width: none;
 padding-top: 120px;
 }
@@ -377,7 +377,7 @@ header::after {
 .category h1 {
  text-align: center;
 font-size: 2.6rem;
-margin-bottom: 3rem;
+margin-bottom: 2rem;
 color: var(--inti3);
 font-family: dino;
 letter-spacing:5px;
@@ -385,7 +385,7 @@ letter-spacing:5px;
 
 .card-items {
     display: flex;
-    padding: 2rem;
+    padding: 1rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -430,6 +430,7 @@ letter-spacing:5px;
    font-size: 20px;
    transition: 0.6s ease;
    margin: 0px 10px;
+   border: 1px solid var(--background);
 }
 
 .card .card-content .btn:hover {
@@ -438,6 +439,55 @@ letter-spacing:5px;
     border: 1px solid var(--background);
 }
 
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+footer .navend {
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+    border-top: 1px solid var(--inti2);
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+footer .navlist {
+    padding: 1rem;
+}
+
+footer h4 {
+    text-align: left;
+    font-family: boxes;
+    margin-bottom: 1rem;
+}
+
+footer .navend .navlist ul {
+    list-style-type: none;
+}
+
+footer .navend .navlist ul li {
+    margin: 0.5rem 0px;
+}
+
+footer .navend .navlist ul li a {
+    text-decoration: none;
+    color: var(--inti2);
+    font-weight: 200;
+}
+
+footer .navend .navlist ul li a:hover {
+    color: var(--inti);
+}
+
+.navend .navend .made span{
+    font-weight: 100;
+    font: italic;
+}
 
 
 
@@ -478,6 +528,11 @@ letter-spacing:5px;
     .bar_extra #search-icon {
         display: none;
     }
+
+    .slider {
+        width: 80%;
+        border-radius: 5%;
+    }
 }
 
 /* layar tablet */
@@ -491,14 +546,9 @@ letter-spacing:5px;
     }
     
     nav {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
-    nav .logo {
-        width: 400px;
-        justify-content: none;
-        display: flex;
-    }
 
     nav .container .logo a img {
         width: 55px;
@@ -520,31 +570,31 @@ letter-spacing:5px;
     .bar_extra a #search-icon{
         display: block;
         color: var(--inti2);
-        transform: scale(110%);
+        transform: scale(100%);
         transition: 0.2s linear;
         text-shadow: 5px 4px 3px var(--background);
     }
 
     .bar_extra #search-icon:hover {
         color: var(--inti);
-        transform: scale(120%);
+        transform: scale(110%);
     }
 
     #user_logo {
-        transform: scale(110%);
+        transform: scale(100%);
     }
     
     #user_logo:hover {
-        transform: scale(120%);
+        transform: scale(110%);
     }
 
     .bar_extra #search-icon, #menu-icon {
-        transform: scale(110%);
+        transform: scale(100%);
     }
 
     .bar_extra #search-icon, #menu-icon:hover {
         color: var(--inti);
-        transform: scale(120%);
+        transform: scale(110%);
     }
 
     .slider {
@@ -581,33 +631,37 @@ letter-spacing:5px;
     html {
         font-size: 60%;
     }
-
+/* 
     nav .container .logo a img {
-        width: 40px;
-    }
+        width: 80%;
+    } */
 
     nav .container .logo a h1 {
         font-size: 15px;
     }
 
-    .bar_extra #search-icon:hover {
+    .bar_extra {
+        font-size: 60%;
+    }
+
+    .bar_extra .search-icon:hover {
         color: var(--inti);
         transform: scale(110%);
     }
 
-    #user_logo {
+    .user_logo {
         transform: scale(100%);
     }
     
-    #user_logo:hover {
+    .user_logo:hover {
         transform: scale(110%);
     }
 
-    .bar_extra #search-icon{
+    .bar_extra .search-icon{
         transform: scale(100%);
     }
 
-    .bar_extra #search-iconhover {
+    .bar_extra .search-iconhover {
         color: var(--inti);
         transform: scale(110%);
     }
