@@ -28,3 +28,18 @@ var slideIndex = 1;
 
 
     }
+
+
+    // NAVBAR MENU
+    const NavBarNav = document.querySelector('.menu');
+    // ketika hamburger menu 
+    document.querySelector('#menu-icon').onclick = () => {
+        NavBarNav.classList.toggle('active');
+    };
+
+    const hamburger = document.querySelector('#menu-icon');
+    document.addEventListener('click', function (e) {
+        if (!hamburger.contains(e.target) && !NavBarNav.contains(e.target)) {
+            NavBarNav.classList.remove('active');
+        };
+    });

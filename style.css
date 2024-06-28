@@ -27,14 +27,18 @@
     scrollbar-width: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     background-color: #010101;
     color: var(--inti2);
     justify-content: center;
     font-family: 'Segoe UI', Tahoma,;
-scrollbar-width: none;
-padding-top: 120px;
+    scrollbar-width: none;
+    padding-top: 120px;
 }
 
 /* bahan persiapan akhir*/
@@ -169,13 +173,14 @@ nav .container .search-form #slogo {
 /* section */
 header {
    min-height: 100vh;
-   display: flex;
    background-image: url(/foto_dan_logo/background.PNG);
    background-size: cover;
    background-repeat: no-repeat;
    justify-content: center;
    width: 100vw;
    position: relative;
+   display: flex;
+   margin-bottom: 4rem;
 }
 
 header::after {
@@ -310,12 +315,15 @@ header::after {
             opacity: 1;
     }
 }
+
+
+
 /* header akhir */
 
 
 /* about us */
 .about {
-    padding: 10rem 7% 1.4rem;
+    padding: 15rem 7% 1.4rem;
 }
 
 .about h1 {
@@ -336,7 +344,7 @@ header::after {
 }
 
 .about .row .row-img {
-    flex: 1 1 15rem;
+    flex: 1 1 30wrem;
 }
 
 .about .row .row-img img {
@@ -381,6 +389,10 @@ margin-bottom: 2rem;
 color: var(--inti3);
 font-family: dino;
 letter-spacing:5px;
+}
+
+.category h1 span {
+    color: var(--inti2);
 }
 
 .card-items {
@@ -456,6 +468,10 @@ footer .navend {
     margin-bottom: 3rem;
 }
 
+footer .made {
+    font-weight: italic;
+}
+
 footer .navlist {
     padding: 1rem;
 }
@@ -500,15 +516,50 @@ footer .navend .navlist ul li a:hover {
         font-size: 70%;
     }
 
-    .menu {
-        display: none;
+    nav .container .menu {
+        display: inline-block;
+        position: absolute;
+        right: -100%;
+        top: 100%;
+        background-color: var(--inti2);
+        width: 25rem;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+    }   
+
+    nav .container .menu.active {
+        right: 0;
     }
+
+    nav .container .menu ul {
+        display: inline-block;  
+    }
+
+    .menu ul li {
+        padding: 3rem 0rem;
+
+    }
+
+    nav .container .menu ul li a {
+        color: var(--inti2);
+        background-color: var(--background);
+        padding: 15px;
+        border-radius: 20px;
+        border: 1px solid var(--background);
+        text-shadow: none;
+    }
+
+    nav .container .menu ul li a:hover {
+        background-color: var(--inti2);
+        color: var(--background);
+    }
+
 
     .bar_extra {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         color: var(--inti2);
-        width: 150px;
         align-items: center;
     }
 
@@ -518,6 +569,7 @@ footer .navend .navlist ul li a:hover {
         transform: scale(130%);
         transition: 0.2s linear;
         text-shadow: 5px 4px 3px var(--background);
+        margin: 0px 20px;
     }
 
     .bar_extra #search-icon, #menu-icon:hover {
@@ -549,7 +601,6 @@ footer .navend .navlist ul li a:hover {
         justify-content: space-around;
     }
 
-
     nav .container .logo a img {
         width: 55px;
     }
@@ -559,11 +610,6 @@ footer .navend .navlist ul li a:hover {
     }
 
     nav .container .search-form {
-        display: none;
-        width: 100vw;
-    }
-
-    .menu {
         display: none;
     }
 
@@ -588,13 +634,8 @@ footer .navend .navlist ul li a:hover {
         transform: scale(110%);
     }
 
-    .bar_extra #search-icon, #menu-icon {
-        transform: scale(100%);
-    }
-
-    .bar_extra #search-icon, #menu-icon:hover {
-        color: var(--inti);
-        transform: scale(110%);
+    .bar_extra a #search-icon {
+        display: none;
     }
 
     .slider {
@@ -624,6 +665,12 @@ footer .navend .navlist ul li a:hover {
         color: var(--inti);
         text-align: center;
     }
+
+    .about,
+    .category {
+        padding: 13rem 7% 1.4rem;
+    }
+
 }
 
 
@@ -631,17 +678,13 @@ footer .navend .navlist ul li a:hover {
     html {
         font-size: 60%;
     }
-/* 
-    nav .container .logo a img {
-        width: 80%;
-    } */
 
     nav .container .logo a h1 {
         font-size: 15px;
     }
 
     .bar_extra {
-        font-size: 60%;
+        font-size: 20%;
     }
 
     .bar_extra .search-icon:hover {
@@ -657,12 +700,7 @@ footer .navend .navlist ul li a:hover {
         transform: scale(110%);
     }
 
-    .bar_extra .search-icon{
-        transform: scale(100%);
-    }
-
-    .bar_extra .search-iconhover {
-        color: var(--inti);
-        transform: scale(110%);
+    .bar_extra  a .search-icon{
+        display: none;
     }
 }
